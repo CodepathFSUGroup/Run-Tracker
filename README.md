@@ -59,18 +59,25 @@ Application to track a user's run and collects information like the run distance
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Feed Screen
+* Active Run Screen
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login Screen
+   * First, the user is presented with the login screen they will be instructed to enter their username and password or sign up for an account.
+   * For users that have a pre-existing account, they will be directed to the feed screen.
+   * Feed Screen: shows the history of past user runs. The feed screen has a map and information about the run (time elapsed, distance, and average pace). The feed screen also has an option for the user to go to the settings page.
+   * Active Run Screen: screen that is used when the user is currently on a run. On this screen, there is a map that shows the path of the user's run so far, time elapsed, distance, and average pace. There are also 2 buttons: start/stop (similar to pause/unpause) and finish (complete the run).
+* Sign Up Screen
+   * On the sign up screen, the user is prompted to sign up with their email. The user must also create a username and password.
+   * The user has 2 buttons: exit (cancel the sign up) and sign up (create the account).
+   * After signing up, the user will be directed to the feed screen.
+* Settings
+   * On the settings screen, the user can change their email, username, and password.
+   * There are 3 text boxes for the options.
+   * There is also a button for the user to update changes.
+   * After making changes, the user will be directed back to the feed screen.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
