@@ -47,10 +47,10 @@ Application to track a user's run and collects information like the run distance
    * On the sign in screen, the user enters their email, username, and password
    * They can either create the account or cancel
 * Feed Screen
-   * The feed screen shows a map, time elapsed, distance, and pace for past user runs
+   * The feed screen shows a map, time elapsed, distance, and pace for the user's last run
    * There is also a settings button for the user to go and change their information
 * Active Run Screen
-   * The active run screen shows a map, time elapsed, distance, and pace for the user's current run
+   * The active run screen shows the time elapsed, distance, and pace for the user's current run
    * The active run screen also includes a button for the user to start and stop their run
 * Settings Screen
    * On the setttings screen, the user has the option to update their username, email, or password
