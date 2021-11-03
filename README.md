@@ -100,26 +100,55 @@ Application to track a user's run and collects information like the run distance
 - Sign Up Screen
 	- (Create/POST) Create user with Email, Username, and Hash of Password
       ```swift
-      let query = PFQuery(className:"Post")
-      query.whereKey("author", equalTo: currentUser)
-      query.order(byDescending: "createdAt")
-      query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-         if let error = error { 
-            print(error.localizedDescription)
-         } else if let posts = posts {
-            print("Successfully retrieved \(posts.count) posts.")
-         // TODO: Do something with posts...
+      func myMethod() {
+         var user = PFUser()
+         user.username = "myUsername"
+         user.password = "myPassword"
+         user.email = "email@example.com"
+         user.emailVerified = false
+
+         user.signUpInBackground {
+            (succeeded: Bool, error: Error?) -> Void in
+            if let error = error {
+               let errorString = error.localizedDescription
+               // Show the errorString somewhere and let the user try again.
+            } else {
+               // Hooray! Let them use the app now.
+            }
          }
       }
       ```
 - Login Screen
 	- (Read/GET) Query all user’s usernames to see if username exists. Then, query username’s password hash to see if the entered password’s hash matches up. If the hash matches, we can log the user in using the supplied input.
+      ```swift
+      PFUser.logInWithUsername(inBackground:"myname", password:"mypass") {
+         (user: PFUser?, error: Error?) -> Void in
+         if user != nil {
+            // Do stuff after successful login.
+         } else {
+            // The login failed. Check error to see why.
+         }
+      }
+      ```
 - Feed Screen
 	- No network request made here. Displays user’s last run data, which is stored on the device. Since we are only storing the last run’s data, we simply overwrite the last run’s data values every time a new run is completed, and use the new run’s values for display.
 - Active Run Screen
 	- No parse requests made from this screen. This screen will need to contact the maps API, however, to display the active location of the runner. Somehow the time elapsed, distance, average pace, and JSONified map data will need to be stored to the device.
 - Settings Screen
-	- (Update/PUT) Update Email, Username, Password for logged in user
+	- (Update/PUT) Reset Password for logged in user
+      ```swift
+      PFUser.requestPasswordResetForEmail(inBackground:"email@example.com")
+      ```
+   - (Update/PUT) Update Email for logged in user
+      ```swift
+      PFUser.current().email = "example@example.com"
+      PFUser.current().emailVerified = false
+      PFUser.current()?.saveInBackground()
+      ```
+   - (Update/PUT) Update Username for logged in user
+      ```swift
+      PFUser.current().username = “new username”
+      PFUser.current()?.saveInBackground()
+      ```
 
-- [Create basic snippets for each Parse network request]
 - No APIs are used - only Apple MapKit is used.
