@@ -87,11 +87,26 @@ Application to track a user's run and collects information like the run distance
 
 ### [BONUS] Interactive Prototype
 
-## Schema 
-[This section will be completed in Unit 9]
+## Schema
 ### Models
-[Add table of models]
+| Property      | Type     | Description |
+| ------------- | -------- | ------------ |
+| userId        | String   | unique id for the user (primary key) |
+| username      | String   | username |
+| password      | String   | hash of the user's password |
+| email         | String   | user's email address |
+
 ### Networking
-- [Add list of network requests by screen ]
+- Sign Up Screen
+    - (Create/POST) Create user with Email, Username, and Hash of Password
+- Login Screen
+    - (Read/GET) Query all user’s usernames to see if username exists. Then, query username’s password hash to see if the entered password’s hash matches up. If the hash matches, we can log the user in using the supplied input.
+- Feed Screen
+    - No network request made here. Displays user’s last run data, which is stored on the device. Since we are only storing the last run’s data, we simply overwrite the last run’s data values every time a new run is completed, and use the new run’s values for display.
+- Active Run Screen
+    - No parse requests made from this screen. This screen will need to contact the maps API, however, to display the active location of the runner. Somehow the time elapsed, distance, average pace, and JSONified map data will need to be stored to the device.
+- Settings Screen
+    - (Update/PUT) Update Email, Username, Password for logged in user
+
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- No APIs are used - only Apple MapKit is used.
