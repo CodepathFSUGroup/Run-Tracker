@@ -98,15 +98,28 @@ Application to track a user's run and collects information like the run distance
 
 ### Networking
 - Sign Up Screen
-   - (Create/POST) Create user with Email, Username, and Hash of Password
+	- (Create/POST) Create user with Email, Username, and Hash of Password
+      ```swift
+      let query = PFQuery(className:"Post")
+      query.whereKey("author", equalTo: currentUser)
+      query.order(byDescending: "createdAt")
+      query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+         if let error = error { 
+            print(error.localizedDescription)
+         } else if let posts = posts {
+            print("Successfully retrieved \(posts.count) posts.")
+         // TODO: Do something with posts...
+         }
+      }
+      ```
 - Login Screen
-   - (Read/GET) Query all user’s usernames to see if username exists. Then, query username’s password hash to see if the entered password’s hash matches up. If the hash matches, we can log the user in using the supplied input.
+	- (Read/GET) Query all user’s usernames to see if username exists. Then, query username’s password hash to see if the entered password’s hash matches up. If the hash matches, we can log the user in using the supplied input.
 - Feed Screen
-   - No network request made here. Displays user’s last run data, which is stored on the device. Since we are only storing the last run’s data, we simply overwrite the last run’s data values every time a new run is completed, and use the new run’s values for display.
+	- No network request made here. Displays user’s last run data, which is stored on the device. Since we are only storing the last run’s data, we simply overwrite the last run’s data values every time a new run is completed, and use the new run’s values for display.
 - Active Run Screen
-   - No parse requests made from this screen. This screen will need to contact the maps API, however, to display the active location of the runner. Somehow the time elapsed, distance, average pace, and JSONified map data will need to be stored to the device.
+	- No parse requests made from this screen. This screen will need to contact the maps API, however, to display the active location of the runner. Somehow the time elapsed, distance, average pace, and JSONified map data will need to be stored to the device.
 - Settings Screen
-   - (Update/PUT) Update Email, Username, Password for logged in user
+	- (Update/PUT) Update Email, Username, Password for logged in user
 
 - [Create basic snippets for each Parse network request]
 - No APIs are used - only Apple MapKit is used.
