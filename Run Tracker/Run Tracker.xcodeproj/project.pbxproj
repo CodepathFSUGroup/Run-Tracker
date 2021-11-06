@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09594C6C2736FD5600D0EF2F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09594C6B2736FD5600D0EF2F /* SignUpViewController.swift */; };
 		09A7DCD52736C63800E48A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7DCD42736C63800E48A5C /* AppDelegate.swift */; };
 		09A7DCD72736C63800E48A5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7DCD62736C63800E48A5C /* SceneDelegate.swift */; };
 		09A7DCDC2736C63800E48A5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A7DCDA2736C63800E48A5C /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		08E08A2CC3ACBAF7FC546C72 /* Pods-Run TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Run TrackerTests/Pods-Run TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		09594C6B2736FD5600D0EF2F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		09A7DCD12736C63800E48A5C /* Run Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A7DCD42736C63800E48A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09A7DCD62736C63800E48A5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				09A7DCD42736C63800E48A5C /* AppDelegate.swift */,
 				09A7DCD62736C63800E48A5C /* SceneDelegate.swift */,
 				09A7DCDA2736C63800E48A5C /* Main.storyboard */,
+				09594C6B2736FD5600D0EF2F /* SignUpViewController.swift */,
 				09B5042C2736C98B00FC375F /* LoginViewController.swift */,
 				09B5042E2736C99800FC375F /* FeedViewController.swift */,
 				09A7DCDD2736C63900E48A5C /* Assets.xcassets */,
@@ -413,6 +416,7 @@
 				09A7DCD52736C63800E48A5C /* AppDelegate.swift in Sources */,
 				09B5042F2736C99800FC375F /* FeedViewController.swift in Sources */,
 				09A7DCD72736C63800E48A5C /* SceneDelegate.swift in Sources */,
+				09594C6C2736FD5600D0EF2F /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  Run Tracker
 //
 //  Created by Grace Brill on 11/6/21.
@@ -8,12 +8,13 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController {
+
     @IBOutlet weak var usernameField: UITextField!
     
-    @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var emailField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,27 +22,26 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onLogin(_ sender: Any) {
-        let username = usernameField.text!
-        let password = passwordField.text!
+    @IBAction func onCreation(_ sender: Any) {
+        let user = PFUser()
+        user.username = usernameField.text
+        user.password = passwordField.text
+        user.email = emailField.text
         
-        PFUser.logInWithUsername(inBackground: username, password: password) { (user, failure) in
-            if user != nil{
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        user.signUpInBackground { (success, failure) in
+            if success{
+                self.performSegue(withIdentifier: "createAccount", sender: nil)
             }
             
             else{
-                print("Error: \(failure?.localizedDescription)")
+                print("Error \(failure?.localizedDescription)")
             }
         }
     }
     
-
-    @IBAction func onSignUp(_ sender: Any) {
-        self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+    @IBAction func onCancel(_ sender: Any) {
+        self.performSegue(withIdentifier: "cancelToLogin", sender: nil)
     }
-    
-        
     
     /*
     // MARK: - Navigation
