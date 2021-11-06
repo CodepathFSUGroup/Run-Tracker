@@ -1,0 +1,6 @@
+framework module Pods_Run_Tracker_Run_TrackerUITests {
+  umbrella header "Pods-Run Tracker-Run TrackerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
