@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Run_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login Screen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Run_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,25 +198,30 @@
                     <navigationItem key="navigationItem" id="7VT-zU-Uk4">
                         <barButtonItem key="rightBarButtonItem" title="I" style="plain" id="gUP-7a-1wP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4Lt-Lm-fYa">
-                                <rect key="frame" x="302" y="12.5" width="92" height="31"/>
+                                <rect key="frame" x="302" y="8.5" width="92" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout">
                                     <fontDescription key="titleFontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onLogout:" destination="T9G-wR-zuW" eventType="touchUpInside" id="Uay-fS-M6z"/>
+                                </connections>
                             </button>
+                            <connections>
+                                <action selector="onLogout:" destination="T9G-wR-zuW" id="efl-Qy-Wf6"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edk-fm-KXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1806" y="94"/>
+            <point key="canvasLocation" x="2171" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B82-Gy-Gpg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ah4-6G-Iz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Vgt-hL-Yh7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Vgt-hL-Yh7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d7g-vE-oxD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -227,6 +232,7 @@
                         <segue destination="T9G-wR-zuW" kind="relationship" relationship="rootViewController" id="64k-ui-4hk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ah4-6G-Iz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="94.419642857142847"/>
         </scene>
