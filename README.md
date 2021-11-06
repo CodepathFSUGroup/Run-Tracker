@@ -27,9 +27,9 @@ Application to track a user's run and collects information like the run distance
 
 **Required Must-have Stories**
 
-* User can create a new account
-* User can login
-* Managing the backend with Parse
+* User can create a new account [X]
+* User can login [X]
+* Managing the backend with Parse [X]
 * User can view run information on the home page dashboard
 * User can track their current run on the active run page
 * Active run page
@@ -82,6 +82,9 @@ Application to track a user's run and collects information like the run distance
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
 ![Screenshot](wireframe.png)
+
+## Sprint 1 Walkthrough
+<img src = 'https://media.giphy.com/media/EhTbZvpALDROGyOypW/giphy.gif' title='Sprint 1 Walkthrough' />
 
 ### [BONUS] Digital Wireframes & Mockups
 
