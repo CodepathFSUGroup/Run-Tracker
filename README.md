@@ -30,8 +30,8 @@ Application to track a user's run and collects information like the run distance
 - [X] User can create a new account
 - [X] User can login 
 - [X] Managing the backend with Parse
-* User can view run information on the home page dashboard
-* User can track their current run on the active run page
+- [ ] User can view run information on the home page dashboard
+- [ ] User can track their current run on the active run page
 - [X] Active run page
 
 **Optional Nice-to-have Stories**
