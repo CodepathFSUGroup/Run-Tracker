@@ -19,6 +19,7 @@
 		09B5042D2736C98B00FC375F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B5042C2736C98B00FC375F /* LoginViewController.swift */; };
 		09B5042F2736C99800FC375F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B5042E2736C99800FC375F /* FeedViewController.swift */; };
 		34DCA13D746EBD188C269152 /* Pods_Run_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177B6CD2F6DAE074C5956566 /* Pods_Run_TrackerTests.framework */; };
+		4C5ADEC7273B5B91004D85FD /* ActiveRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5ADEC6273B5B91004D85FD /* ActiveRunViewController.swift */; };
 		60C5F3C2FBD9EE71AE6999DF /* Pods_Run_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F82D8BFA2C4C40D588DB9D /* Pods_Run_Tracker.framework */; };
 		9A3C6ABE28B718F9CCFEEC5C /* Pods_Run_Tracker_Run_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82306484B65BCB8232ECF694 /* Pods_Run_Tracker_Run_TrackerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		0A3BB5CD4AE8D63FC6E68482 /* Pods-Run Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run Tracker.release.xcconfig"; path = "Target Support Files/Pods-Run Tracker/Pods-Run Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		177B6CD2F6DAE074C5956566 /* Pods_Run_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Run_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1512982AF5CC4D82A8D1B5 /* Pods-Run Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Run Tracker/Pods-Run Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		4C5ADEC6273B5B91004D85FD /* ActiveRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRunViewController.swift; sourceTree = "<group>"; };
 		75F82D8BFA2C4C40D588DB9D /* Pods_Run_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Run_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82306484B65BCB8232ECF694 /* Pods_Run_Tracker_Run_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Run_Tracker_Run_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D72A1EF2654ADC03474132 /* Pods-Run Tracker-Run TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run Tracker-Run TrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Run Tracker-Run TrackerUITests/Pods-Run Tracker-Run TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		09A7DCD32736C63800E48A5C /* Run Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				4C5ADEC6273B5B91004D85FD /* ActiveRunViewController.swift */,
 				09A7DCD42736C63800E48A5C /* AppDelegate.swift */,
 				09A7DCD62736C63800E48A5C /* SceneDelegate.swift */,
 				09A7DCDA2736C63800E48A5C /* Main.storyboard */,
@@ -416,6 +419,7 @@
 				09A7DCD52736C63800E48A5C /* AppDelegate.swift in Sources */,
 				09B5042F2736C99800FC375F /* FeedViewController.swift in Sources */,
 				09A7DCD72736C63800E48A5C /* SceneDelegate.swift in Sources */,
+				4C5ADEC7273B5B91004D85FD /* ActiveRunViewController.swift in Sources */,
 				09594C6C2736FD5600D0EF2F /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

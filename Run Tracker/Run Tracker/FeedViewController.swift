@@ -7,12 +7,23 @@
 
 import UIKit
 import Parse
-
+import MapKit
 class FeedViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var timeElapsed: UIView!
+    @IBOutlet weak var distanceTraveled: UIView!
+    @IBOutlet weak var averagePace: UIView!
+        
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        timeElapsed.layer.cornerRadius = 20
+        distanceTraveled.layer.cornerRadius = 20
+        averagePace.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
 
