@@ -163,7 +163,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onCreation:" destination="rwX-Uh-bEx" eventType="touchUpInside" id="9aD-Q1-9Kh"/>
-                                    <segue destination="Vgt-hL-Yh7" kind="presentation" identifier="createAccount" id="xit-qQ-HEY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run Tracker Registration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIh-lA-uPd">
@@ -348,9 +347,6 @@
             <point key="canvasLocation" x="1015.9420289855074" y="94.419642857142847"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="xit-qQ-HEY"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="TextColor">
             <color red="0.12941176470588237" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

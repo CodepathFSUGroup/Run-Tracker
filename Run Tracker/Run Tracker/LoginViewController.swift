@@ -38,6 +38,12 @@ class LoginViewController: UIViewController {
             
             else{
                 print("Error: \(failure?.localizedDescription)")
+                
+                let alert = UIAlertController(title: "Login Failed!", message: "Please check your information and try again!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Try Again", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("Login failed alert")
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
