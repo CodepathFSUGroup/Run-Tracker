@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,32 +14,22 @@
             <objects>
                 <viewController storyboardIdentifier="Login Screen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Run_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Tracker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hj-Df-UuE">
-                                <rect key="frame" x="91" y="131" width="232" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run Tracker" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hj-Df-UuE">
+                                <rect key="frame" x="96.5" y="94" width="221.5" height="224.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9hj-Df-UuE" secondAttribute="height" multiplier="143:145" id="Muw-Cw-2v8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="60"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-bO-FjE">
-                                <rect key="frame" x="44" y="296" width="116" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52b-pk-fNI">
-                                <rect key="frame" x="44" y="335" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yb-Tv-vuj">
-                                <rect key="frame" x="146" y="617" width="105" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yb-Tv-vuj">
+                                <rect key="frame" x="40" y="448.5" width="334" height="51"/>
+                                <color key="backgroundColor" name="aquaBlue"/>
+                                <color key="tintColor" name="backgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
                                     <fontDescription key="titleFontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
@@ -47,141 +38,259 @@
                                     <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sno-Ad-FKn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account already" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCy-Zl-evl">
-                                <rect key="frame" x="37" y="704" width="341" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCZ-wR-kmf">
-                                <rect key="frame" x="135" y="743" width="132" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFK-E2-24I" userLabel="Username Box">
+                                <rect key="frame" x="30" y="318.5" width="354" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52b-pk-fNI">
+                                        <rect key="frame" x="7" y="0.0" width="340" height="40"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="textFieldColor"/>
+                                <constraints>
+                                    <constraint firstItem="52b-pk-fNI" firstAttribute="top" secondItem="MFK-E2-24I" secondAttribute="top" id="BbB-xF-A1C"/>
+                                    <constraint firstAttribute="trailing" secondItem="52b-pk-fNI" secondAttribute="trailing" constant="7" id="Paz-Dt-Ehx"/>
+                                    <constraint firstAttribute="bottom" secondItem="52b-pk-fNI" secondAttribute="bottom" id="V5j-5d-3HO"/>
+                                    <constraint firstAttribute="height" constant="40" id="fdk-FO-YK8"/>
+                                    <constraint firstItem="52b-pk-fNI" firstAttribute="leading" secondItem="MFK-E2-24I" secondAttribute="leading" constant="7" id="stu-GL-ga3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="xZo-b1-kc2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbe-rX-cE7" userLabel="Password Box">
+                                <rect key="frame" x="30" y="378.5" width="354" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uA4-RI-rtS">
+                                        <rect key="frame" x="7" y="0.0" width="340" height="40"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="textFieldColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uA4-RI-rtS" secondAttribute="trailing" constant="7" id="GRg-Mx-ENw"/>
+                                    <constraint firstAttribute="height" constant="40" id="JrX-c4-XY4"/>
+                                    <constraint firstAttribute="bottom" secondItem="uA4-RI-rtS" secondAttribute="bottom" id="Tfq-sW-7yc"/>
+                                    <constraint firstItem="uA4-RI-rtS" firstAttribute="leading" secondItem="Qbe-rX-cE7" secondAttribute="leading" constant="7" id="h8l-ds-Eib"/>
+                                    <constraint firstItem="uA4-RI-rtS" firstAttribute="top" secondItem="Qbe-rX-cE7" secondAttribute="top" id="vCd-ys-gUc"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCZ-wR-kmf">
+                                <rect key="frame" x="57.5" y="519.5" width="299" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DCZ-wR-kmf" secondAttribute="height" multiplier="299:42" id="xsO-2H-9lH"/>
+                                </constraints>
+                                <color key="tintColor" name="TextColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign Up">
-                                    <fontDescription key="titleFontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Click here to sign up now!">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="24" name="Helvetica"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mIH-Dx-hSQ"/>
-                                    <segue destination="rwX-Uh-bEx" kind="presentation" identifier="signUpSegue" id="FC9-Vk-llb"/>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSU-mB-fPW"/>
+                                    <segue destination="rwX-Uh-bEx" kind="presentation" identifier="signUpSegue" id="KTd-QX-hUf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rav-iH-ISj">
-                                <rect key="frame" x="44" y="433" width="110" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uA4-RI-rtS">
-                                <rect key="frame" x="44" y="472" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Qbe-rX-cE7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4DU-ge-7q6"/>
+                            <constraint firstItem="DCZ-wR-kmf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4fu-Y2-9Iy"/>
+                            <constraint firstItem="9hj-Df-UuE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="AJj-ir-4lq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3yb-Tv-vuj" secondAttribute="trailing" constant="40" id="DtR-Kj-tKz"/>
+                            <constraint firstItem="DCZ-wR-kmf" firstAttribute="top" secondItem="3yb-Tv-vuj" secondAttribute="bottom" constant="20" id="ElV-9Y-Fxv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qbe-rX-cE7" secondAttribute="trailing" constant="30" id="GWT-rv-VBj"/>
+                            <constraint firstItem="3yb-Tv-vuj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="JjS-9u-3m9"/>
+                            <constraint firstItem="MFK-E2-24I" firstAttribute="top" secondItem="9hj-Df-UuE" secondAttribute="bottom" id="O2m-JX-04Y"/>
+                            <constraint firstItem="3yb-Tv-vuj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wbj-fN-RAo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MFK-E2-24I" secondAttribute="trailing" constant="30" id="hW2-KO-dpd"/>
+                            <constraint firstItem="Qbe-rX-cE7" firstAttribute="top" secondItem="MFK-E2-24I" secondAttribute="bottom" constant="20" id="tyl-5u-idr"/>
+                            <constraint firstItem="9hj-Df-UuE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vXX-Q7-XIk"/>
+                            <constraint firstItem="3yb-Tv-vuj" firstAttribute="top" secondItem="Qbe-rX-cE7" secondAttribute="bottom" constant="30" id="vby-vN-3cM"/>
+                            <constraint firstItem="MFK-E2-24I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xhE-Ie-7sf"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wfp-Ow-Xvt" appends="YES" id="TIM-Zq-4SM"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="3yb-Tv-vuj" id="sDv-4t-wJC"/>
+                        <outlet property="passwordBox" destination="Qbe-rX-cE7" id="ubT-ac-ncZ"/>
                         <outlet property="passwordField" destination="uA4-RI-rtS" id="EKC-dg-zun"/>
+                        <outlet property="usernameBox" destination="MFK-E2-24I" id="YyB-hH-BaC"/>
                         <outlet property="usernameField" destination="52b-pk-fNI" id="bD2-5R-62J"/>
                         <segue destination="Vgt-hL-Yh7" kind="presentation" identifier="loginSegue" id="PRw-r2-W08"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wfp-Ow-Xvt" userLabel="dismissKeyboardTap">
+                    <connections>
+                        <action selector="dismissKeyboardTap:" destination="BYZ-38-t0r" id="Ucg-41-62X"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="60.869565217391312" y="93.75"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="JeW-NO-gvh">
             <objects>
-                <viewController id="rwX-Uh-bEx" customClass="SignUpViewController" customModule="Run_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="rwX-Uh-bEx" customClass="SignUpViewController" customModule="Run_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9o4-Ue-GLd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="171-Zm-jhG">
-                                <rect key="frame" x="53" y="345" width="116" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mve-i5-Nas">
-                                <rect key="frame" x="53" y="384" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eK-mY-3sm">
-                                <rect key="frame" x="53" y="580" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tc-vv-pks">
-                                <rect key="frame" x="53" y="541" width="110" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHB-Q6-lMR">
-                                <rect key="frame" x="53" y="446" width="63" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="La0-eg-aPp">
-                                <rect key="frame" x="53" y="485" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncA-la-XgZ">
-                                <rect key="frame" x="20" y="661" width="198" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncA-la-XgZ">
+                                <rect key="frame" x="45" y="483" width="324" height="45"/>
+                                <color key="backgroundColor" name="aquaBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="grS-35-Bgd"/>
+                                </constraints>
+                                <color key="tintColor" name="backgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create Account">
                                     <fontDescription key="titleFontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onCreation:" destination="rwX-Uh-bEx" eventType="touchUpInside" id="9aD-Q1-9Kh"/>
-                                    <segue destination="Vgt-hL-Yh7" kind="presentation" identifier="createAccount" id="xit-qQ-HEY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-x0-vBb">
-                                <rect key="frame" x="275" y="661" width="102" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run Tracker Registration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIh-lA-uPd">
+                                <rect key="frame" x="50" y="94" width="314" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nIh-lA-uPd" secondAttribute="height" multiplier="39:16" id="RUt-DF-dO9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="56"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uv-k6-wG5" userLabel="CreateUsername Box">
+                                <rect key="frame" x="30" y="293" width="354" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Create a username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mve-i5-Nas">
+                                        <rect key="frame" x="7" y="0.0" width="340" height="40"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="textFieldColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mve-i5-Nas" secondAttribute="trailing" constant="7" id="VLp-iN-HFK"/>
+                                    <constraint firstItem="Mve-i5-Nas" firstAttribute="top" secondItem="9uv-k6-wG5" secondAttribute="top" id="aRK-00-uVc"/>
+                                    <constraint firstAttribute="height" constant="40" id="gTy-bh-Vzm"/>
+                                    <constraint firstItem="Mve-i5-Nas" firstAttribute="leading" secondItem="9uv-k6-wG5" secondAttribute="leading" constant="7" id="ryL-go-iIk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mve-i5-Nas" secondAttribute="bottom" id="x4Q-dF-DlD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oo2-y9-83h" userLabel="EnterEmail Box">
+                                <rect key="frame" x="30" y="353" width="354" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="La0-eg-aPp">
+                                        <rect key="frame" x="7" y="0.0" width="340" height="40"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="textFieldColor"/>
+                                <constraints>
+                                    <constraint firstItem="La0-eg-aPp" firstAttribute="top" secondItem="oo2-y9-83h" secondAttribute="top" id="Fib-Nr-ub7"/>
+                                    <constraint firstAttribute="height" constant="40" id="IpH-rt-Nrj"/>
+                                    <constraint firstItem="La0-eg-aPp" firstAttribute="leading" secondItem="oo2-y9-83h" secondAttribute="leading" constant="7" id="i4w-3b-2At"/>
+                                    <constraint firstAttribute="trailing" secondItem="La0-eg-aPp" secondAttribute="trailing" constant="7" id="jTj-Wi-Fd4"/>
+                                    <constraint firstAttribute="bottom" secondItem="La0-eg-aPp" secondAttribute="bottom" id="qhR-sq-0cM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOk-eg-AiY" userLabel="EnterPassword Box">
+                                <rect key="frame" x="30" y="413" width="354" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Create a password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eK-mY-3sm">
+                                        <rect key="frame" x="7" y="0.0" width="340" height="40"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="textFieldColor"/>
+                                <constraints>
+                                    <constraint firstItem="4eK-mY-3sm" firstAttribute="leading" secondItem="bOk-eg-AiY" secondAttribute="leading" constant="7" id="6aT-np-PrO"/>
+                                    <constraint firstAttribute="trailing" secondItem="4eK-mY-3sm" secondAttribute="trailing" constant="7" id="DOa-pv-7gQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="E0c-so-QdL"/>
+                                    <constraint firstAttribute="bottom" secondItem="4eK-mY-3sm" secondAttribute="bottom" id="S8O-XX-qa1"/>
+                                    <constraint firstItem="4eK-mY-3sm" firstAttribute="top" secondItem="bOk-eg-AiY" secondAttribute="top" id="cYx-Qg-Cgc"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-x0-vBb">
+                                <rect key="frame" x="120" y="553" width="174" height="45"/>
+                                <color key="backgroundColor" name="light red"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="drg-ly-Kf2"/>
+                                </constraints>
+                                <color key="tintColor" name="backgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel">
                                     <fontDescription key="titleFontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onCancel:" destination="rwX-Uh-bEx" eventType="touchUpInside" id="dRs-Pf-rjz"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="cancelToLogin" id="5yu-Zd-Nrp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Tracker Registration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIh-lA-uPd">
-                                <rect key="frame" x="50" y="159" width="312" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="60"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s6D-WG-bOg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bOk-eg-AiY" firstAttribute="leading" secondItem="s6D-WG-bOg" secondAttribute="leading" constant="30" id="8cT-AU-mk8"/>
+                            <constraint firstItem="s6D-WG-bOg" firstAttribute="trailing" secondItem="oo2-y9-83h" secondAttribute="trailing" constant="30" id="9tb-bW-DnS"/>
+                            <constraint firstItem="ncA-la-XgZ" firstAttribute="leading" secondItem="s6D-WG-bOg" secondAttribute="leading" constant="45" id="Eei-D7-2ui"/>
+                            <constraint firstItem="s6D-WG-bOg" firstAttribute="trailing" secondItem="ncA-la-XgZ" secondAttribute="trailing" constant="45" id="JaJ-wd-AkE"/>
+                            <constraint firstItem="oo2-y9-83h" firstAttribute="top" secondItem="9uv-k6-wG5" secondAttribute="bottom" constant="20" id="Llk-Ge-H1D"/>
+                            <constraint firstItem="9uv-k6-wG5" firstAttribute="leading" secondItem="s6D-WG-bOg" secondAttribute="leading" constant="30" id="Nua-6k-KFr"/>
+                            <constraint firstItem="n1S-x0-vBb" firstAttribute="top" secondItem="ncA-la-XgZ" secondAttribute="bottom" constant="25" id="OXC-pn-E5n"/>
+                            <constraint firstItem="ncA-la-XgZ" firstAttribute="top" secondItem="bOk-eg-AiY" secondAttribute="bottom" constant="30" id="Pbe-tm-7Hb"/>
+                            <constraint firstItem="s6D-WG-bOg" firstAttribute="trailing" secondItem="nIh-lA-uPd" secondAttribute="trailing" constant="50" id="PvU-Ya-NGZ"/>
+                            <constraint firstItem="oo2-y9-83h" firstAttribute="leading" secondItem="s6D-WG-bOg" secondAttribute="leading" constant="30" id="Wwc-Fm-mtk"/>
+                            <constraint firstItem="nIh-lA-uPd" firstAttribute="top" secondItem="s6D-WG-bOg" secondAttribute="top" constant="50" id="YhD-ZI-wd3"/>
+                            <constraint firstItem="9uv-k6-wG5" firstAttribute="top" secondItem="nIh-lA-uPd" secondAttribute="bottom" constant="70" id="e22-lx-zuQ"/>
+                            <constraint firstItem="bOk-eg-AiY" firstAttribute="top" secondItem="oo2-y9-83h" secondAttribute="bottom" constant="20" id="e92-Qh-Rmm"/>
+                            <constraint firstItem="n1S-x0-vBb" firstAttribute="leading" secondItem="s6D-WG-bOg" secondAttribute="leading" constant="120" id="hDY-mN-fGS"/>
+                            <constraint firstItem="nIh-lA-uPd" firstAttribute="leading" secondItem="s6D-WG-bOg" secondAttribute="leading" constant="50" id="ho5-FG-dXW"/>
+                            <constraint firstItem="s6D-WG-bOg" firstAttribute="trailing" secondItem="9uv-k6-wG5" secondAttribute="trailing" constant="30" id="ljT-We-Yud"/>
+                            <constraint firstItem="s6D-WG-bOg" firstAttribute="trailing" secondItem="bOk-eg-AiY" secondAttribute="trailing" constant="30" id="x2J-5z-sfk"/>
+                            <constraint firstItem="s6D-WG-bOg" firstAttribute="trailing" secondItem="n1S-x0-vBb" secondAttribute="trailing" constant="120" id="x7V-FI-Vxh"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="K4t-Gt-rfq" appends="YES" id="MPu-VR-PSe"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="n1S-x0-vBb" id="Yov-4i-ZxE"/>
+                        <outlet property="createAccountButton" destination="ncA-la-XgZ" id="3T4-5W-3fk"/>
+                        <outlet property="createUsernameBox" destination="9uv-k6-wG5" id="8Md-s0-NVe"/>
                         <outlet property="emailField" destination="La0-eg-aPp" id="RWH-tU-Wl4"/>
+                        <outlet property="enterEmailBox" destination="oo2-y9-83h" id="TKp-Dh-JAM"/>
+                        <outlet property="enterPasswordBox" destination="bOk-eg-AiY" id="bpr-vp-mKZ"/>
                         <outlet property="passwordField" destination="4eK-mY-3sm" id="03c-0J-QuJ"/>
                         <outlet property="usernameField" destination="Mve-i5-Nas" id="6zA-6x-rTR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gg4-k1-WJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="K4t-Gt-rfq" userLabel="dismissKeyboardTap">
+                    <connections>
+                        <action selector="dismissKeyboardTap:" destination="rwX-Uh-bEx" id="TZx-e3-hGB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="85.507246376811594" y="825.66964285714278"/>
         </scene>
@@ -190,7 +299,7 @@
             <objects>
                 <viewController id="T9G-wR-zuW" customClass="FeedViewController" customModule="Run_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F8e-Yu-DPK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="K7j-0q-91x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -198,7 +307,7 @@
                     <navigationItem key="navigationItem" id="7VT-zU-Uk4">
                         <barButtonItem key="rightBarButtonItem" title="I" style="plain" id="gUP-7a-1wP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4Lt-Lm-fYa">
-                                <rect key="frame" x="302" y="8.5" width="92" height="39"/>
+                                <rect key="frame" x="302" y="2.5" width="92" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout">
@@ -221,10 +330,11 @@
         <!--Navigation Controller-->
         <scene sceneID="B82-Gy-Gpg">
             <objects>
-                <navigationController storyboardIdentifier="FeedNavigationController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Vgt-hL-Yh7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Vgt-hL-Yh7" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="HAq-fx-CmO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d7g-vE-oxD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -237,10 +347,22 @@
             <point key="canvasLocation" x="1015.9420289855074" y="94.419642857142847"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="PRw-r2-W08"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <namedColor name="TextColor">
+            <color red="0.12941176470588237" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aquaBlue">
+            <color red="0.0" green="0.63200002908706665" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundColor">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="light red">
+            <color red="1" green="0.49799999594688416" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textFieldColor">
+            <color red="0.33725490196078434" green="0.35294117647058826" blue="0.41176470588235292" alpha="0.15000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

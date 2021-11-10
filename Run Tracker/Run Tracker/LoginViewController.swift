@@ -10,14 +10,20 @@ import Parse
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var passwordField: UITextField!
+        
+    @IBOutlet weak var usernameBox: UIView!
+    @IBOutlet weak var passwordBox: UIView!
     
-    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        usernameBox.layer.cornerRadius = 20
+        passwordBox.layer.cornerRadius = 20
+        loginButton.layer.cornerRadius = 20
+        loginButton.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
     
@@ -32,6 +38,12 @@ class LoginViewController: UIViewController {
             
             else{
                 print("Error: \(failure?.localizedDescription)")
+                
+                let alert = UIAlertController(title: "Login Failed!", message: "Please check your information and try again!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Try Again", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("Login failed alert")
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -41,7 +53,11 @@ class LoginViewController: UIViewController {
         self.performSegue(withIdentifier: "signUpSegue", sender: nil)
     }
     
-        
+    
+    @IBAction func dismissKeyboardTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     
     /*
     // MARK: - Navigation
