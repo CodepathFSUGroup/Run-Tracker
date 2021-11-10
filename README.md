@@ -84,7 +84,7 @@ Application to track a user's run and collects information like the run distance
 ![Screenshot](wireframe.png)
 
 ## Sprint 2 Walkthrough
-<img src = '' title='Sprint 2 Walkthrough' />
+<img src = 'https://github.com/CodepathFSUGroup/Run-Tracker/blob/main/sprint%202.gif' title='Sprint 2 Walkthrough' />
 ## Sprint 1 Walkthrough
 <img src = 'https://media.giphy.com/media/EhTbZvpALDROGyOypW/giphy.gif' title='Sprint 1 Walkthrough' />
 
