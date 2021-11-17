@@ -16,6 +16,9 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var averagePace: UIView!
         
     
+    @IBOutlet weak var secondCounter: UILabel!
+    @IBOutlet weak var mileCounter: UILabel!
+    @IBOutlet weak var avgPace: UILabel!
     
     
     override func viewDidLoad() {

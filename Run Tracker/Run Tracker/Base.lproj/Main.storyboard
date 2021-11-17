@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -150,14 +151,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nut-up-26O">
-                                <rect key="frame" x="35" y="659" width="344" height="40"/>
-                                <color key="backgroundColor" name="aquaBlue"/>
+                                <rect key="frame" x="35" y="649" width="344" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ucl-hr-TAZ"/>
                                 </constraints>
                                 <color key="tintColor" name="backgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start/Pause Run"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Run"/>
+                                <connections>
+                                    <action selector="onStart:" destination="k6p-hu-QeI" eventType="touchUpInside" id="Bih-CF-JwQ"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWl-8l-QWF" userLabel="Time Elapsed Box">
                                 <rect key="frame" x="20" y="429" width="374" height="50"/>
@@ -171,7 +175,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeP-bU-MwF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeP-bU-MwF">
                                         <rect key="frame" x="124" y="0.0" width="250" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -259,27 +263,48 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u59-Re-FS5">
-                                <rect key="frame" x="35" y="729" width="344" height="40"/>
+                                <rect key="frame" x="35" y="769" width="344" height="40"/>
                                 <color key="backgroundColor" name="light red"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="17z-1W-kWz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="gQM-qZ-OAk"/>
                                 </constraints>
                                 <color key="tintColor" name="backgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Finish Run"/>
+                                <connections>
+                                    <action selector="onStop:" destination="k6p-hu-QeI" eventType="touchUpInside" id="APl-xE-DLE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywZ-lZ-Y7f">
+                                <rect key="frame" x="35" y="709" width="344" height="40"/>
+                                <color key="backgroundColor" name="aquaBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3HZ-bY-ReG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="UvT-8Z-29K"/>
+                                </constraints>
+                                <color key="tintColor" name="backgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pause Run"/>
+                                <connections>
+                                    <action selector="onPause:" destination="k6p-hu-QeI" eventType="touchUpInside" id="Irg-F2-a89"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JnC-4v-sI8"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
+                            <constraint firstItem="u59-Re-FS5" firstAttribute="top" secondItem="ywZ-lZ-Y7f" secondAttribute="bottom" constant="20" id="7oj-mF-rJz"/>
                             <constraint firstItem="u59-Re-FS5" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="35" id="BTK-Sm-zhj"/>
+                            <constraint firstItem="ywZ-lZ-Y7f" firstAttribute="top" secondItem="Nut-up-26O" secondAttribute="bottom" constant="20" id="FmX-Gh-LFy"/>
                             <constraint firstItem="JnC-4v-sI8" firstAttribute="trailing" secondItem="373-BH-jwG" secondAttribute="trailing" constant="20" id="HGP-0j-5f7"/>
                             <constraint firstItem="25W-Mh-T1G" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="20" id="Suc-GP-DiT"/>
                             <constraint firstItem="Fs2-vm-Fhp" firstAttribute="top" secondItem="JnC-4v-sI8" secondAttribute="top" constant="70" id="TOO-RL-jfg"/>
-                            <constraint firstItem="Nut-up-26O" firstAttribute="top" secondItem="373-BH-jwG" secondAttribute="bottom" constant="30" id="TTS-pQ-T4X"/>
+                            <constraint firstItem="Nut-up-26O" firstAttribute="top" secondItem="373-BH-jwG" secondAttribute="bottom" constant="20" id="TTS-pQ-T4X"/>
                             <constraint firstItem="373-BH-jwG" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="20" id="WO8-sW-WVO"/>
                             <constraint firstItem="25W-Mh-T1G" firstAttribute="top" secondItem="RWl-8l-QWF" secondAttribute="bottom" constant="25" id="Yrm-e6-Pr2"/>
                             <constraint firstItem="RWl-8l-QWF" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="20" id="Zcs-Pj-NeQ"/>
+                            <constraint firstItem="JnC-4v-sI8" firstAttribute="trailing" secondItem="ywZ-lZ-Y7f" secondAttribute="trailing" constant="35" id="bvx-ft-RSG"/>
                             <constraint firstItem="373-BH-jwG" firstAttribute="top" secondItem="25W-Mh-T1G" secondAttribute="bottom" constant="25" id="bw0-lY-F78"/>
                             <constraint firstItem="Fs2-vm-Fhp" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="77" id="drG-sR-vtA"/>
                             <constraint firstItem="JnC-4v-sI8" firstAttribute="trailing" secondItem="Fs2-vm-Fhp" secondAttribute="trailing" constant="77" id="gh1-Od-7bV"/>
@@ -287,16 +312,20 @@
                             <constraint firstItem="JnC-4v-sI8" firstAttribute="trailing" secondItem="u59-Re-FS5" secondAttribute="trailing" constant="35" id="ith-EI-Vm5"/>
                             <constraint firstItem="Nut-up-26O" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="35" id="keT-DN-gDn"/>
                             <constraint firstItem="JnC-4v-sI8" firstAttribute="trailing" secondItem="RWl-8l-QWF" secondAttribute="trailing" constant="20" id="mdo-eg-7hE"/>
-                            <constraint firstItem="u59-Re-FS5" firstAttribute="top" secondItem="Nut-up-26O" secondAttribute="bottom" constant="30" id="uFI-QE-9MH"/>
                             <constraint firstItem="JnC-4v-sI8" firstAttribute="trailing" secondItem="Nut-up-26O" secondAttribute="trailing" constant="35" id="uVE-bD-HDb"/>
                             <constraint firstItem="JnC-4v-sI8" firstAttribute="trailing" secondItem="25W-Mh-T1G" secondAttribute="trailing" constant="20" id="vPa-cg-IhY"/>
+                            <constraint firstItem="ywZ-lZ-Y7f" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="35" id="whJ-QQ-XhQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="p8K-JR-4Sv"/>
                     <connections>
                         <outlet property="averagePaceBox" destination="373-BH-jwG" id="xuC-NC-1zR"/>
+                        <outlet property="avgPace" destination="0vm-Qr-QzR" id="Veu-gU-gvg"/>
                         <outlet property="distanceBox" destination="25W-Mh-T1G" id="qt6-pV-LLY"/>
                         <outlet property="finishButton" destination="u59-Re-FS5" id="UYl-lt-ZHS"/>
+                        <outlet property="mileCounter" destination="ZpW-dN-Qm7" id="7dO-gL-BMZ"/>
+                        <outlet property="pauseButton" destination="ywZ-lZ-Y7f" id="y2Q-HY-LQc"/>
+                        <outlet property="secondsCounter" destination="xeP-bU-MwF" id="kR3-p4-pfb"/>
                         <outlet property="startButton" destination="Nut-up-26O" id="0hO-0z-Ff7"/>
                         <outlet property="timeElapsedBox" destination="RWl-8l-QWF" id="lBK-rT-8Rm"/>
                     </connections>
@@ -308,7 +337,6 @@
         <!--Feed View Controller-->
         <scene sceneID="N4a-TX-0JF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NRv-cf-166" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="vQj-m2-PQC" customClass="FeedViewController" customModule="Run_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N3p-5E-d55">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -441,11 +469,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="averagePace" destination="pFq-3b-Idd" id="MRM-DE-EN1"/>
+                        <outlet property="avgPace" destination="UlS-B9-kag" id="SdN-aw-0l7"/>
                         <outlet property="distanceTraveled" destination="x7G-gg-M7o" id="7jl-AB-s7U"/>
                         <outlet property="mapView" destination="Oc4-cx-bRk" id="QGt-sn-Dux"/>
+                        <outlet property="mileCounter" destination="z71-kE-NRj" id="vGl-w1-cRp"/>
+                        <outlet property="secondCounter" destination="9Jb-WI-FwP" id="gIR-U6-E9j"/>
                         <outlet property="timeElapsed" destination="aEw-eT-mRg" id="r3h-J9-WqG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRv-cf-166" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2852.1739130434785" y="-206.25"/>
         </scene>
@@ -656,5 +688,8 @@
         <namedColor name="textFieldColor">
             <color red="0.33725490196078434" green="0.35294117647058826" blue="0.41176470588235292" alpha="0.15000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
