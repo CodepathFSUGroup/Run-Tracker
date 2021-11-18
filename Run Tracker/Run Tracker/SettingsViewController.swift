@@ -12,13 +12,13 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var usernameBox: UIView!
     @IBOutlet weak var emailBox: UIView!
-    @IBOutlet weak var passwordBox: UIView!
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var confirmPasswordBox: UIView!
+    @IBOutlet weak var resetPasswordButton: UIButton!
+    @IBOutlet weak var saveChangesButton: UIButton!
     
-    @IBOutlet weak var passwordTextfield: UITextField!
-    @IBOutlet weak var confirmPasswordTextfield: UITextField!
+    
+
     
     var user = PFUser.current()
     
@@ -26,8 +26,8 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         usernameBox.layer.cornerRadius = 20
         emailBox.layer.cornerRadius = 20
-        passwordBox.layer.cornerRadius = 20
-        confirmPasswordBox.layer.cornerRadius = 20
+        resetPasswordButton.layer.cornerRadius = 20
+        saveChangesButton.layer.cornerRadius = 20
         
         //Retrieve user info
         usernameTextfield.text = user?.username
@@ -40,23 +40,41 @@ class SettingsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onPasswordReset(_ sender: Any) {
+        PFUser.requestPasswordResetForEmail(inBackground: (user?.email)!) { success, error in
+            if error != nil{
+                print(error)
+            }else{
+                let alert = UIAlertController(title: "Password Reset Email Sent!", message: "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("update account")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
     
-    //Password changer not working!
     @IBAction func updateAccountInfo(_ sender: Any) {
         user?.username = usernameTextfield.text!
         user?.email = emailTextfield.text!
-        
         
         user?.saveInBackground(block: { success, error in
             if error != nil{
                 print("Error: \(String(describing: error))")
             }
             else{
-                print("Settings updated!")
+                let alert = UIAlertController(title: "Account information updated!", message: "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("password email")
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         })
     }
     
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     
     /*

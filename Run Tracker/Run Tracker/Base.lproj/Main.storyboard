@@ -536,49 +536,28 @@
                                     <constraint firstAttribute="height" constant="40" id="xeU-9E-bbx"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADV-nD-YDM" userLabel="Password Box">
-                                <rect key="frame" x="20" y="427.5" width="374" height="40"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter current password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Oh-dN-aML">
-                                        <rect key="frame" x="8" y="0.0" width="358" height="40"/>
-                                        <color key="textColor" name="TextColor"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" name="textFieldColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdB-BP-7il">
+                                <rect key="frame" x="40" y="427.5" width="334" height="35"/>
+                                <color key="backgroundColor" name="light red"/>
                                 <constraints>
-                                    <constraint firstItem="7Oh-dN-aML" firstAttribute="top" secondItem="ADV-nD-YDM" secondAttribute="top" id="7GC-rd-rd6"/>
-                                    <constraint firstItem="7Oh-dN-aML" firstAttribute="leading" secondItem="ADV-nD-YDM" secondAttribute="leading" constant="8" id="Ydi-74-lLo"/>
-                                    <constraint firstAttribute="height" constant="40" id="Zyl-85-5xT"/>
-                                    <constraint firstAttribute="trailing" secondItem="7Oh-dN-aML" secondAttribute="trailing" constant="8" id="ftc-7z-KaC"/>
-                                    <constraint firstAttribute="bottom" secondItem="7Oh-dN-aML" secondAttribute="bottom" id="isy-eA-aSV"/>
+                                    <constraint firstAttribute="height" constant="35" id="rW5-Ky-4mD"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqP-0J-5eJ" userLabel="Confirm Password Box">
-                                <rect key="frame" x="20" y="507.5" width="374" height="40"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3X-mx-Ov1">
-                                        <rect key="frame" x="8" y="0.0" width="358" height="40"/>
-                                        <color key="textColor" name="TextColor"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" name="textFieldColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="f3X-mx-Ov1" secondAttribute="bottom" id="973-dl-MwO"/>
-                                    <constraint firstItem="f3X-mx-Ov1" firstAttribute="top" secondItem="PqP-0J-5eJ" secondAttribute="top" id="OG2-64-PEX"/>
-                                    <constraint firstAttribute="height" constant="40" id="cMf-bp-Qsc"/>
-                                    <constraint firstItem="f3X-mx-Ov1" firstAttribute="leading" secondItem="PqP-0J-5eJ" secondAttribute="leading" constant="8" id="e4G-RA-OR5"/>
-                                    <constraint firstAttribute="trailing" secondItem="f3X-mx-Ov1" secondAttribute="trailing" constant="8" id="lLx-DP-co4"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGN-it-u63">
-                                <rect key="frame" x="174" y="648" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="backgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset Password"/>
+                                <connections>
+                                    <action selector="onPasswordReset:" destination="ySq-7d-st7" eventType="touchUpInside" id="c2x-tl-jo7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGN-it-u63">
+                                <rect key="frame" x="40" y="502.5" width="334" height="35"/>
+                                <color key="backgroundColor" name="Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="KVj-Z4-sfq"/>
+                                </constraints>
+                                <color key="tintColor" name="backgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Changes"/>
                                 <connections>
                                     <action selector="updateAccountInfo:" destination="ySq-7d-st7" eventType="touchUpInside" id="z6s-eZ-heW"/>
                                 </connections>
@@ -586,23 +565,27 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="auH-PY-xf8"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="auH-PY-xf8" firstAttribute="trailing" secondItem="uGN-it-u63" secondAttribute="trailing" constant="40" id="20e-0i-Ntr"/>
                             <constraint firstItem="kup-7G-ZIg" firstAttribute="leading" secondItem="auH-PY-xf8" secondAttribute="leading" constant="20" id="2Gr-ID-Nge"/>
                             <constraint firstItem="kup-7G-ZIg" firstAttribute="top" secondItem="fyD-5l-lE7" secondAttribute="bottom" constant="80" id="4n6-Ya-ZGH"/>
+                            <constraint firstItem="NdB-BP-7il" firstAttribute="top" secondItem="pLh-GT-7a0" secondAttribute="bottom" constant="40" id="6Nq-2E-uTV"/>
+                            <constraint firstItem="auH-PY-xf8" firstAttribute="trailing" secondItem="NdB-BP-7il" secondAttribute="trailing" constant="40" id="7IA-Gq-nVv"/>
                             <constraint firstItem="fyD-5l-lE7" firstAttribute="leading" secondItem="auH-PY-xf8" secondAttribute="leading" constant="20" id="CRb-bm-nsO"/>
                             <constraint firstItem="pLh-GT-7a0" firstAttribute="top" secondItem="kup-7G-ZIg" secondAttribute="bottom" constant="40" id="Dka-YM-diE"/>
-                            <constraint firstItem="auH-PY-xf8" firstAttribute="trailing" secondItem="PqP-0J-5eJ" secondAttribute="trailing" constant="20" id="ECA-Bg-o9y"/>
-                            <constraint firstItem="PqP-0J-5eJ" firstAttribute="leading" secondItem="auH-PY-xf8" secondAttribute="leading" constant="20" id="ERP-Kn-mQa"/>
-                            <constraint firstItem="ADV-nD-YDM" firstAttribute="top" secondItem="pLh-GT-7a0" secondAttribute="bottom" constant="40" id="Fa1-Ty-TTX"/>
-                            <constraint firstItem="auH-PY-xf8" firstAttribute="trailing" secondItem="ADV-nD-YDM" secondAttribute="trailing" constant="20" id="R4t-jC-h1H"/>
+                            <constraint firstItem="uGN-it-u63" firstAttribute="top" secondItem="NdB-BP-7il" secondAttribute="bottom" constant="40" id="Rpl-0K-7T9"/>
                             <constraint firstItem="pLh-GT-7a0" firstAttribute="leading" secondItem="auH-PY-xf8" secondAttribute="leading" constant="20" id="Ydr-JN-92W"/>
-                            <constraint firstItem="PqP-0J-5eJ" firstAttribute="top" secondItem="ADV-nD-YDM" secondAttribute="bottom" constant="40" id="ad2-lN-6Sz"/>
+                            <constraint firstItem="uGN-it-u63" firstAttribute="leading" secondItem="auH-PY-xf8" secondAttribute="leading" constant="40" id="cl0-Lu-j59"/>
                             <constraint firstItem="auH-PY-xf8" firstAttribute="trailing" secondItem="fyD-5l-lE7" secondAttribute="trailing" constant="20" id="f1U-fc-Gjz"/>
+                            <constraint firstItem="NdB-BP-7il" firstAttribute="leading" secondItem="auH-PY-xf8" secondAttribute="leading" constant="40" id="f1W-dR-oHp"/>
                             <constraint firstItem="auH-PY-xf8" firstAttribute="trailing" secondItem="pLh-GT-7a0" secondAttribute="trailing" constant="20" id="igk-NP-c23"/>
-                            <constraint firstItem="ADV-nD-YDM" firstAttribute="leading" secondItem="auH-PY-xf8" secondAttribute="leading" constant="20" id="vai-2k-nn1"/>
                             <constraint firstItem="fyD-5l-lE7" firstAttribute="top" secondItem="auH-PY-xf8" secondAttribute="top" constant="60" id="wyg-SQ-afj"/>
                             <constraint firstItem="auH-PY-xf8" firstAttribute="trailing" secondItem="kup-7G-ZIg" secondAttribute="trailing" constant="20" id="zkD-pq-atp"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Val-Ab-fei" appends="YES" id="hEH-Jd-bdp"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="E0a-a0-j4w">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="axF-VI-yXC">
@@ -612,17 +595,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="confirmPasswordBox" destination="PqP-0J-5eJ" id="EGV-0I-hk9"/>
-                        <outlet property="confirmPasswordTextfield" destination="f3X-mx-Ov1" id="fXd-uM-o8w"/>
                         <outlet property="emailBox" destination="pLh-GT-7a0" id="7Uj-fu-mBc"/>
                         <outlet property="emailTextfield" destination="F4o-Pl-k56" id="dW8-dq-0yl"/>
-                        <outlet property="passwordBox" destination="ADV-nD-YDM" id="d9d-nM-0wh"/>
-                        <outlet property="passwordTextfield" destination="7Oh-dN-aML" id="igx-Ea-A2H"/>
+                        <outlet property="resetPasswordButton" destination="NdB-BP-7il" id="8b8-gP-DTm"/>
+                        <outlet property="saveChangesButton" destination="uGN-it-u63" id="ffx-D4-WpK"/>
                         <outlet property="usernameBox" destination="kup-7G-ZIg" id="f1i-OI-SFs"/>
                         <outlet property="usernameTextfield" destination="uvC-fo-kS1" id="hhv-Iu-Z6B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlV-f8-ZVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Val-Ab-fei">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="ySq-7d-st7" id="HhF-Kh-I9k"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4865.217391304348" y="-206.25"/>
         </scene>
