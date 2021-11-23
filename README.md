@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # Run Track Application
 
 ## Table of Contents
