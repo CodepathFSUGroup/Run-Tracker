@@ -84,10 +84,14 @@ Application to track a user's run and collects information like the run distance
 [Add picture of your hand sketched wireframes in this section]
 ![Screenshot](wireframe.png)
 
+## Sprint 3 Walkthrough
+<img src='settings_demo.gif' title='Sprint 3 Walkthrough' />
+
 ## Sprint 2 Walkthrough
-<img src = 'https://github.com/CodepathFSUGroup/Run-Tracker/blob/main/sprint%202.gif' title='Sprint 2 Walkthrough' />
+<img src='https://github.com/CodepathFSUGroup/Run-Tracker/blob/main/sprint%202.gif' title='Sprint 2 Walkthrough' />
+
 ## Sprint 1 Walkthrough
-<img src = 'https://media.giphy.com/media/EhTbZvpALDROGyOypW/giphy.gif' title='Sprint 1 Walkthrough' />
+<img src='https://media.giphy.com/media/EhTbZvpALDROGyOypW/giphy.gif' title='Sprint 1 Walkthrough' />
 
 ### [BONUS] Digital Wireframes & Mockups
 
