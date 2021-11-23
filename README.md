@@ -33,6 +33,7 @@ Application to track a user's run and collects information like the run distance
 - [ ] User can view run information on the home page dashboard
 - [ ] User can track their current run on the active run page
 - [X] Active run page
+- [X] Settings screen
 
 **Optional Nice-to-have Stories**
 
