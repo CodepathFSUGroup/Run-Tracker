@@ -36,7 +36,8 @@ Application to track a user's run and collects information like the run distance
 
 * User can add friends
 * User can see their run visually on a map
-* User can see more than just their last run, i.e., paginate through runs; maybe run simple data analytics on the data
+* User can see more than just their last run (i.e., paginate through runs; maybe run simple data analytics on the data)
+* Allow user to keep run going in the background (i.e., they can use other apps and the timer will still run and pedometer data will still be collected/updated)
 
 ### 2. Screen Archetypes
 
