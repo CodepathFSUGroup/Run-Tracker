@@ -13,7 +13,7 @@ Application to track a user's run and collects information like the run distance
 ### App Evaluation
 - **Category: Health and Fitness**
 - **Mobile: iPhone 12**
-- **Story: We decided to make this application to allow users to track their runs. As a runner, I wanted an alternative to Strava and to experiment with iOS development**
+- **Story: We decided to make this application to allow users to track their runs. As a runner, I (Grace) wanted an alternative to Strava and to experiment with iOS development**
 - **Market: People of all ages and levels that enjoy running.**
 - **Habit: Used on an ad hoc basis. Depends on when the user goes for a run**
 - **Scope: Pertains to individual users as opposed to businesses.**
@@ -27,14 +27,15 @@ Application to track a user's run and collects information like the run distance
 - [X] User can create a new account
 - [X] User can login 
 - [X] Managing the backend with Parse
-- [ ] User can view run information on the home page dashboard
-- [ ] User can track their current run on the active run page
+- [X] User can view run information on the home page dashboard
+- [X] User can track their current run on the active run page
 - [X] Active run page
 - [X] Settings screen
 
 **Optional Nice-to-have Stories**
 
 * User can add friends
+* User can see their run visually on a map
 
 ### 2. Screen Archetypes
 
@@ -57,8 +58,8 @@ Application to track a user's run and collects information like the run distance
 
 **Tab Navigation** (Tab to Screen)
 
-* Feed Screen
-* Active Run Screen
+* Feed Screen (Labeled 'Home')
+* Active Run Screen (Labeled 'Run')
 
 **Flow Navigation** (Screen to Screen)
 
