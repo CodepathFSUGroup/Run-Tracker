@@ -11,7 +11,11 @@ import Parse
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    struct DefaultsKeys {
+        static let time = "time"
+        static let distance = "distance"
+        static let pace = "averagePace"
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,6 +26,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: parseConfig)
+        
+        // set default values - these sets will only be run once across all app launches
+        let defaults = UserDefaults.standard
+        
+        if let t = defaults.object(forKey: DefaultsKeys.time) {
+            // do nothing... value is already set
+        } else {
+            // if this code is running, it means t is nil, so it was never defined.
+            // So let's give it a default value that will be overwritten when user makes first run:
+            defaults.set(0.00, forKey: DefaultsKeys.time)
+            
+        }
+        
+        if let d = defaults.object(forKey: DefaultsKeys.distance) {
+            // do nothing... value is already set
+        } else {
+            // if this code is running, it means d is nil, so it was never defined.
+            // So let's give it a default value that will be overwritten when user makes first run:
+            defaults.set(0.00, forKey: DefaultsKeys.distance)
+            
+        }
+        
+        if let p = defaults.object(forKey: DefaultsKeys.pace) {
+            // do nothing... value is already set
+        } else {
+            // if this code is running, it means p is nil, so it was never defined.
+            // So let's give it a default value that will be overwritten when user makes first run:
+            defaults.set(0.00, forKey: DefaultsKeys.pace)
+            
+        }
         
         return true
     }

@@ -21,15 +21,33 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var avgPace: UILabel!
     
     
+    struct DefaultsKeys {
+        static let time = "time"
+        static let distance = "distance"
+        static let pace = "averagePace"
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         timeElapsed.layer.cornerRadius = 20
         distanceTraveled.layer.cornerRadius = 20
         averagePace.layer.cornerRadius = 20
+     
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        // get stored data from last run
+        let defaults = UserDefaults.standard
+        
+        let t = defaults.double(forKey: DefaultsKeys.time)
+        secondCounter.text = String(format: "%02i:%02i:%02i", Int(t) / 3600, Int(t) / 60 % 60, Int(t) % 60)
+        mileCounter.text = String(format: "%.2f miles", defaults.double(forKey: DefaultsKeys.distance))
+        avgPace.text = String(format: "%.2f MPH", defaults.double(forKey: DefaultsKeys.pace))
+    }
+    
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
         

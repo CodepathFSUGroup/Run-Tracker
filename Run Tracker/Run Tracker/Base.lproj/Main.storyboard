@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="60.869565217391312" y="93.75"/>
         </scene>
-        <!--Item 2-->
+        <!--Run-->
         <scene sceneID="0yz-jo-MaH">
             <objects>
                 <viewController id="k6p-hu-QeI" customClass="ActiveRunViewController" customModule="Run_Tracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,7 +205,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vm-Qr-QzR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vm-Qr-QzR">
                                         <rect key="frame" x="88.5" y="0.0" width="285.5" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -236,7 +236,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpW-dN-Qm7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 MPH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpW-dN-Qm7">
                                         <rect key="frame" x="123" y="0.0" width="251" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -316,13 +316,13 @@
                             <constraint firstItem="ywZ-lZ-Y7f" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="35" id="whJ-QQ-XhQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="p8K-JR-4Sv"/>
+                    <tabBarItem key="tabBarItem" title="Run" id="p8K-JR-4Sv"/>
                     <connections>
                         <outlet property="averagePaceBox" destination="373-BH-jwG" id="xuC-NC-1zR"/>
-                        <outlet property="avgPace" destination="0vm-Qr-QzR" id="Veu-gU-gvg"/>
+                        <outlet property="avgPace" destination="ZpW-dN-Qm7" id="mWL-SY-a7m"/>
                         <outlet property="distanceBox" destination="25W-Mh-T1G" id="qt6-pV-LLY"/>
                         <outlet property="finishButton" destination="u59-Re-FS5" id="UYl-lt-ZHS"/>
-                        <outlet property="mileCounter" destination="ZpW-dN-Qm7" id="7dO-gL-BMZ"/>
+                        <outlet property="mileCounter" destination="0vm-Qr-QzR" id="va7-id-yRD"/>
                         <outlet property="pauseButton" destination="ywZ-lZ-Y7f" id="y2Q-HY-LQc"/>
                         <outlet property="secondsCounter" destination="xeP-bU-MwF" id="kR3-p4-pfb"/>
                         <outlet property="startButton" destination="Nut-up-26O" id="0hO-0z-Ff7"/>
@@ -782,11 +782,11 @@
             </objects>
             <point key="canvasLocation" x="85.507246376811594" y="825.66964285714278"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="rmi-Qa-dCA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQn-Dm-feL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="LeX-42-05T"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="LeX-42-05T"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CAU-Vi-mk4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
