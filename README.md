@@ -36,6 +36,7 @@ Application to track a user's run and collects information like the run distance
 
 * User can add friends
 * User can see their run visually on a map
+* User can see more than just their last run, i.e., paginate through runs; maybe run simple data analytics on the data
 
 ### 2. Screen Archetypes
 
