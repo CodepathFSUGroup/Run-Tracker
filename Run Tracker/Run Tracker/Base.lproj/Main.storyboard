@@ -316,7 +316,9 @@
                             <constraint firstItem="ywZ-lZ-Y7f" firstAttribute="leading" secondItem="JnC-4v-sI8" secondAttribute="leading" constant="35" id="whJ-QQ-XhQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Run" id="p8K-JR-4Sv"/>
+                    <tabBarItem key="tabBarItem" title="Run" image="tray" catalog="system" selectedImage="tray" id="p8K-JR-4Sv">
+                        <color key="badgeColor" name="TextColor"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="averagePaceBox" destination="373-BH-jwG" id="xuC-NC-1zR"/>
                         <outlet property="avgPace" destination="ZpW-dN-Qm7" id="mWL-SY-a7m"/>
@@ -786,7 +788,9 @@
         <scene sceneID="rmi-Qa-dCA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQn-Dm-feL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="LeX-42-05T"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="book" catalog="system" selectedImage="book" id="LeX-42-05T">
+                        <color key="badgeColor" name="TextColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CAU-Vi-mk4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -821,7 +825,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="sneaker" width="512" height="512"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
         <namedColor name="Color">
             <color red="0.24313725490196078" green="0.70588235294117652" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
